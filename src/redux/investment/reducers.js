@@ -1,4 +1,4 @@
-import { DEPOSIT, WITHDRAW } from "./actionTypes";
+import { DEPOSIT, WITHDRAW, RESET } from "./actionTypes";
 
 const initialState = {
   amount: 0,
@@ -26,6 +26,13 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         amount: state.amount - action.payload
+      };
+    }
+    case RESET: {
+      return {
+        ...state,
+        amount: initialState.amount,
+        error: "",
       };
     }
 

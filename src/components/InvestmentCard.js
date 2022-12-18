@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import { deposit, withdraw } from "../redux/investment/actions";
+import { deposit, withdraw, reset } from "../redux/investment/actions";
 
 const InvestmantCard = () => {
   const dispatch = useDispatch();
@@ -18,6 +18,10 @@ const InvestmantCard = () => {
 
   const handleWithdraw = () => {
     dispatch(withdraw(10));
+  };
+
+  const handleReset = () => {
+    dispatch(reset());
   };
 
   return (
@@ -42,6 +46,9 @@ const InvestmantCard = () => {
         </Button>
         <Button size="small" onClick={handleWithdraw}>
           Withdraw 10$
+        </Button>
+        <Button size="small" onClick={handleReset}>
+          Reset
         </Button>
       </CardActions>
     </Card>
