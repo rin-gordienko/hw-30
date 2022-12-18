@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 
 import { deposit, withdraw, reset } from "../redux/investment/actions";
 
-const InvestmantCard = () => {
+const InvestmentCard = () => {
   const dispatch = useDispatch();
   const { amount, error } = useSelector((state) => state.investment);
 
@@ -55,4 +55,4 @@ const InvestmantCard = () => {
   );
 };
 
-export default InvestmantCard;
+export default InvestmentCard;

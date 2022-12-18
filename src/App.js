@@ -1,9 +1,10 @@
+import InvestmentCard from "./components/InvestmentCard"
 
 
 function App() {
   return (
     <div>
-      <InvestmantCard />
+      <InvestmentCard />
     </div>
   );
 }
